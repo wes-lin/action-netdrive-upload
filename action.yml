@@ -1,0 +1,24 @@
+name: "Netdrive-upload"
+description: "网盘文件上传,目前支持小飞机网盘|蓝奏云优享等"
+author: "Wes Lin"
+inputs:
+  files:
+    description: "需要上传文件(支持通配符)"
+    required: true
+
+  drive-type:
+    description: "网盘类型 (支持: feijipan/ilanzou)"
+    required: true
+
+  folder-id:
+    description: '目标文件夹ID'
+    required: false
+    default: ''
+
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
+branding:
+  color: "green"
+  icon: "package"
