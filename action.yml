@@ -10,11 +10,18 @@ inputs:
     description: "网盘类型 (支持: feijipan/ilanzou)"
     required: true
 
-  folder-id:
-    description: '目标文件夹ID'
+  dest-path:
+    description: "目标文件夹路径"
     required: false
-    default: ''
+    default: ""
 
+  username:
+    description: "账号"
+    required: true
+
+  password:
+    description: "密码"
+    required: true
 
 runs:
   using: "node20"

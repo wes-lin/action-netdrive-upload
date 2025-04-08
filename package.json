@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@actions/core": "^1.11.1",
-    "@netdrive-sdk/ilanzou": "workspace:*"
+    "@netdrive-sdk/ilanzou": "workspace:*",
+    "glob": "^11.0.1"
   }
 }
