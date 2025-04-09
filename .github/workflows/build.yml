@@ -29,6 +29,12 @@ jobs:
           node-version: 18
           cache: pnpm
 
+      - name: Build Netdrive SDK
+        run: |
+          cd netdrive-sdk
+          pnpm install
+          pnpm build
+
       - name: Install Dependencies
         run: pnpm install
 
