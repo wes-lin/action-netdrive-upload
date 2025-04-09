@@ -23,6 +23,9 @@ inputs:
     description: "密码"
     required: true
 
+  debug:
+    description: "是否输出调试日志"
+
 runs:
   using: "node20"
   main: "dist/index.js"

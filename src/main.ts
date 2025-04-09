@@ -1,4 +1,5 @@
 import {
+  getBooleanInput,
   getInput,
   getMultilineInput,
   setFailed,
@@ -30,14 +31,14 @@ async function run() {
   const username = getInput("username", { required: true });
   const password = getInput("password", { required: true });
   const destPath = getInput("dest-path", { required: false });
+  const debug = getBooleanInput("debug", { required: false });
   const options: LanZouYClientOptions = {
     username,
     password,
     tokenStore: new FileTokenStore(`.token/${driveType}/${username}.token`),
     logConfig: {
-      isDebugEnabled: true,
-      fileOutput: true,
-      consoleOutput: true,
+      isDebugEnabled: debug,
+      fileOutput: !!process.env.FILE_OUTPUT,
     },
   };
   const client =

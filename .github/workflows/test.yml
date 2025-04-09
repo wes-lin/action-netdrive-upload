@@ -20,7 +20,8 @@ jobs:
         with:
           username: ${{ secrets.NET_DRIVE_USERNAME }}
           password: ${{ secrets.NET_DRIVE_PASSWORD }}
+          debug: ${{ vars.DEBUG }}
           drive-type: ilanzou
-          dest-path: test/cache
+          dest-path: 测试目录/c缓存ache
           files: |
             .cache/*.bin
