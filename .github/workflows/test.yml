@@ -12,15 +12,13 @@ jobs:
       - name: Create .cache directory (if not exists)
         run: mkdir -p .cache
 
-      - name: Generate random filename and create file
+      - name: Generate 5MB random text file
         run: |
-          FILENAME="random_$RANDOM.txt"
+          FILENAME="random_$(date +%s)_${RANDOM}.txt"
 
-          echo "Random text generated at $(date)" > ".cache/$FILENAME"
-          echo "Random number: $RANDOM" >> ".cache/$FILENAME"
+          dd if=/dev/urandom of=".cache/$FILENAME" bs=1024 count=5120
 
-          echo "File created at: .cache/$FILENAME"
-          cat ".cache/$FILENAME"
+          ls -lh ".cache/$FILENAME"
 
       - name: Upload to Netdrive
         uses: wes-lin/action-netdrive-upload@main
