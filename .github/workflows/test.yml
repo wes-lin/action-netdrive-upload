@@ -9,11 +9,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out git repository
-        uses: actions/checkout@v4
+      - name: Create .cache directory (if not exists)
+        run: mkdir -p .cache
 
-      - name: GenerateRandomFile
-        run: npm run random:file
+      - name: Generate random filename and create file
+        run: |
+          FILENAME="random_$RANDOM.txt"
+
+          echo "Random text generated at $(date)" > ".cache/$FILENAME"
+          echo "Random number: $RANDOM" >> ".cache/$FILENAME"
+
+          echo "File created at: .cache/$FILENAME"
+          cat ".cache/$FILENAME"
 
       - name: Upload to Netdrive
         uses: wes-lin/action-netdrive-upload@main
@@ -24,4 +31,4 @@ jobs:
           drive-type: ilanzou
           dest-path: 测试目录/缓存
           files: |
-            .cache/*.bin
+            .cache/*.txt
