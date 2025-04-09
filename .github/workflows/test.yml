@@ -1,0 +1,29 @@
+name: Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  upload:
+    steps:
+    - name: Check out git repository
+      uses: actions/checkout@v4
+
+    - name: Install Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+        cache: npm
+
+    - name: GenerateRandomFile
+      run: npm run random:file
+
+    - name: Upload to Netdrive
+      uses: wes-lin/action-netdrive-upload
+      with:
+        username: ${{ secrets.NET_DRIVE_USERNAME }}
+        password: ${{ secrets.NET_DRIVE_PASSWORD }}
+        drive-type: ilanzou
+        dest-path: 测试文件/缓存文件
+        files: |
+          .cache/*.bin
