@@ -5,6 +5,9 @@ on:
 
 jobs:
   upload:
+    name: "Test upload"
+    runs-on: ubuntu-latest
+
     steps:
     - name: Check out git repository
       uses: actions/checkout@v4
