@@ -22,7 +22,7 @@ jobs:
         run: npm run random:file
 
       - name: Upload to Netdrive
-        uses: wes-lin/action-netdrive-upload
+        uses: wes-lin/action-netdrive-upload@main
         with:
           username: ${{ secrets.NET_DRIVE_USERNAME }}
           password: ${{ secrets.NET_DRIVE_PASSWORD }}
