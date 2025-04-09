@@ -22,6 +22,6 @@ jobs:
           password: ${{ secrets.NET_DRIVE_PASSWORD }}
           debug: ${{ vars.DEBUG }}
           drive-type: ilanzou
-          dest-path: 测试目录/c缓存ache
+          dest-path: 测试目录/缓存
           files: |
             .cache/*.bin
