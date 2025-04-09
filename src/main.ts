@@ -37,7 +37,7 @@ async function run() {
     logConfig: {
       isDebugEnabled: true,
       fileOutput: true,
-      consoleOutput: false,
+      consoleOutput: true,
     },
   };
   const client =
