@@ -31,10 +31,8 @@ jobs:
 
       - name: Build Netdrive SDK
         run: |
-          cd netdrive-sdk
-          pnpm install
-          pnpm build
-
+          cd netdrive-sdk && pnpm install && pnpm build
+          
       - name: Install Dependencies
         run: pnpm install
 
