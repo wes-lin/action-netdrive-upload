@@ -50,7 +50,7 @@ async function run() {
   const folderId = await client.ensureFolderPath(destPath);
 
   const uploadFile = async (filePath: string) => {
-    console.log(`⬆️ Uploading ${filePath}...`);
+    
     try{
       const fileName = path.basename(filePath)
       const fileList = await client.getFileList({
@@ -65,7 +65,7 @@ async function run() {
         console.log(`♻️ Deleting previously uploaded ${fileName}...`);
         await client.deleteFile({fileIds: existsFiles.map(file => file.fileId)});
       }
-
+      console.log(`⬆️ Uploading ${filePath}...`);
       const res = await client.uploadFile(filePath, folderId);
       console.log(`✅ Uploaded ${filePath}`);
       return {
