@@ -12,8 +12,8 @@ importers:
         specifier: ^1.11.1
         version: 1.11.1
       '@netdrive-sdk/ilanzou':
-        specifier: workspace:*
-        version: link:netdrive-sdk/packages/ilanzou
+        specifier: 1.0.0-alpha.1
+        version: 1.0.0-alpha.1
       glob:
         specifier: ^11.0.1
         version: 11.0.1
@@ -133,6 +133,15 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
+
+  '@netdrive-sdk/ilanzou@1.0.0-alpha.1':
+    resolution: {integrity: sha512-pvi0jUGi5vVdrbIieTXu0XeQvseklJiIpYcnnp8WLfkqFeJMSOz5qKDh4cDe51LZ4HgTHAEPkgG6NO3E3lgLAg==, tarball: https://registry.npmjs.org/@netdrive-sdk/ilanzou/-/ilanzou-1.0.0-alpha.1.tgz}
+
+  '@netdrive-sdk/log@1.0.0-alpha.1':
+    resolution: {integrity: sha512-TZNI74oj76uaMOnbAZlP0L/vCrvIR42yK4P8eXBrsu3yCtHWKXUhQd99e0Ty2H5tBbK7wDqUz8CLaPrMD/Uiow==, tarball: https://registry.npmjs.org/@netdrive-sdk/log/-/log-1.0.0-alpha.1.tgz}
+
+  '@netdrive-sdk/utils@1.0.0-alpha.1':
+    resolution: {integrity: sha512-vovP+G6Vt8/V5f/cdbXnhv2Vbg/WtF9MeS6/o0SKsWVzcpL6IWyI5cCCLOwDBeRMAMQeYyaAcZXMaPEnPruBkA==, tarball: https://registry.npmjs.org/@netdrive-sdk/utils/-/utils-1.0.0-alpha.1.tgz}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -1191,6 +1200,19 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  '@netdrive-sdk/ilanzou@1.0.0-alpha.1':
+    dependencies:
+      '@netdrive-sdk/log': 1.0.0-alpha.1
+      '@netdrive-sdk/utils': 1.0.0-alpha.1
+      got: 11.8.2
+      qiniu: 7.14.0
+    transitivePeerDependencies:
+      - proxy-agent
+
+  '@netdrive-sdk/log@1.0.0-alpha.1': {}
+
+  '@netdrive-sdk/utils@1.0.0-alpha.1': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:

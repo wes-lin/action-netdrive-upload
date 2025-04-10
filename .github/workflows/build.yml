@@ -17,8 +17,6 @@ jobs:
     steps:
       - name: Check out git repository
         uses: actions/checkout@v4
-        with:
-          submodules: true
 
       - uses: pnpm/action-setup@v4
         name: Install pnpm
@@ -31,10 +29,9 @@ jobs:
         with:
           node-version: 18
           cache: pnpm
-          
+
       - name: Install Dependencies
         run: |
-          pnpm build:sdk
           pnpm install
 
       - name: Build
