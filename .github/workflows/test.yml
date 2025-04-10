@@ -8,17 +8,20 @@ jobs:
     name: "Test upload"
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
-      - name: Create .cache directory (if not exists)
-        run: mkdir -p .cache
+      - name: Create dist directory (if not exists)
+        run: mkdir -p dist
 
       - name: Generate 5MB random text file
         run: |
           FILENAME="random_$(date +%s)_${RANDOM}.txt"
 
-          dd if=/dev/urandom of=".cache/$FILENAME" bs=1024 count=5120
+          dd if=/dev/urandom of="dist/$FILENAME" bs=1024 count=5120
 
-          ls -lh ".cache/$FILENAME"
+          ls -lh "dist/$FILENAME"
 
       - name: Upload to Netdrive
         uses: wes-lin/action-netdrive-upload@main
@@ -29,4 +32,4 @@ jobs:
           drive-type: ilanzou
           dest-path: 测试目录/缓存
           files: |
-            .cache/*.txt
+            dist/*.txt
