@@ -12,6 +12,7 @@ import {
   LanZouYClientOptions,
 } from "@netdrive-sdk/ilanzou";
 import { paths, unmatchedPatterns } from "./utils";
+import path from 'path'
 
 async function run() {
   const inputFiles = getMultilineInput("files", { required: true });
@@ -47,8 +48,36 @@ async function run() {
       : new LanZouYClient(options);
   const files = paths(inputFiles);
   const folderId = await client.ensureFolderPath(destPath);
-  const uploadFile = (path: string) => {
-    return client.uploadFile(path, folderId);
+
+  const uploadFile = async (filePath: string) => {
+    console.log(`⬆️ Uploading ${filePath}...`);
+    try{
+      const fileName = path.basename(filePath)
+      const fileList = await client.getFileList({
+        folderId,
+        type: 1,
+        limit: 100
+      })
+      
+      const existsFiles = fileList.list?.filter(file => file.fileName === fileName);
+      
+      if(existsFiles) {
+        console.log(`♻️ Deleting previously uploaded ${fileName}...`);
+        await client.deleteFile({fileIds: existsFiles.map(file => file.fileId)});
+      }
+
+      const res = await client.uploadFile(filePath, folderId);
+      console.log(`✅ Uploaded ${filePath}`);
+      return {
+        path: filePath,
+        id: res
+      }
+    } catch(e) {
+      console.log(`❌ Failed to upload ${filePath}. \n${JSON.stringify(e)}`);
+      return {
+        path: filePath
+      }
+    }
   };
   const assets = await Promise.all(files.map(uploadFile));
   setOutput("assets", assets);
