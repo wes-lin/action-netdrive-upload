@@ -12,8 +12,8 @@ importers:
         specifier: ^1.11.1
         version: 1.11.1
       '@netdrive-sdk/ilanzou':
-        specifier: 1.0.0-alpha.2
-        version: 1.0.0-alpha.2
+        specifier: 1.0.0-alpha.3
+        version: 1.0.0-alpha.3
       glob:
         specifier: ^11.0.1
         version: 11.0.1
@@ -134,8 +134,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
 
-  '@netdrive-sdk/ilanzou@1.0.0-alpha.2':
-    resolution: {integrity: sha512-1KmRtTh5wNUkGaX6QGeAMWXlVhol86OUUM2ErNCA52HGLYpn9ZYU2opr8c6YfLcoYYgDRHMDz2mV7nbXlajv/g==}
+  '@netdrive-sdk/ilanzou@1.0.0-alpha.3':
+    resolution: {integrity: sha512-2g6WAW/f3q0VhC/d/U8KRJByw50W0BEE9aS+GzmWSD6vaQPU/OuF33tkTmKfhY6mgIWsOGXjBcmC64FSnNXYUw==}
 
   '@netdrive-sdk/log@1.0.0-alpha.1':
     resolution: {integrity: sha512-TZNI74oj76uaMOnbAZlP0L/vCrvIR42yK4P8eXBrsu3yCtHWKXUhQd99e0Ty2H5tBbK7wDqUz8CLaPrMD/Uiow==}
@@ -1201,7 +1201,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@netdrive-sdk/ilanzou@1.0.0-alpha.2':
+  '@netdrive-sdk/ilanzou@1.0.0-alpha.3':
     dependencies:
       '@netdrive-sdk/log': 1.0.0-alpha.1
       '@netdrive-sdk/utils': 1.0.0-alpha.1
