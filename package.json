@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@actions/core": "^1.11.1",
-    "@netdrive-sdk/ilanzou": "1.0.0-alpha.4",
+    "@netdrive-sdk/ilanzou": "1.0.0",
     "glob": "^11.0.1"
   }
 }

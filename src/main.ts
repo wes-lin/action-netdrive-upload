@@ -6,10 +6,10 @@ import {
   setOutput,
 } from "@actions/core";
 import {
-  FileTokenStore,
   FeiJiPanClient,
   LanZouYClient,
   LanZouYClientOptions,
+  logger,
 } from "@netdrive-sdk/ilanzou";
 import { paths, unmatchedPatterns } from "./utils";
 import path from "path";
@@ -36,12 +36,11 @@ async function run() {
   const options: LanZouYClientOptions = {
     username,
     password,
-    tokenStore: new FileTokenStore(`.token/${driveType}/${username}.token`),
-    logConfig: {
-      isDebugEnabled: debug,
-      fileOutput: !!process.env.FILE_OUTPUT,
-    },
   };
+  logger.configure({
+    isDebugEnabled: debug,
+    fileOutput: !!process.env.FILE_OUTPUT,
+  });
   const client =
     driveType === "feijipan"
       ? new FeiJiPanClient(options)

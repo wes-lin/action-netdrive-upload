@@ -12,8 +12,8 @@ importers:
         specifier: ^1.11.1
         version: 1.11.1
       '@netdrive-sdk/ilanzou':
-        specifier: 1.0.0-alpha.4
-        version: 1.0.0-alpha.4
+        specifier: 1.0.0
+        version: 1.0.0
       glob:
         specifier: ^11.0.1
         version: 11.0.1
@@ -134,14 +134,14 @@ packages:
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
 
-  '@netdrive-sdk/ilanzou@1.0.0-alpha.4':
-    resolution: {integrity: sha512-epjFUZ00WFoprqeO8ufw0fpIERQb9zgwD2EjJT4U52SroEqU001LEyetQhYwcFXHMZVCleLbPVpZbvldmnJkVA==}
+  '@netdrive-sdk/ilanzou@1.0.0':
+    resolution: {integrity: sha512-joilB0TMhQa67ZNaCwPAlOTn92t1E8rc6VpvFD6OAmEMl7GFE/3w0VkuAidoTsCDQdeDlQ7TTMsHklQmHDhPgQ==}
 
-  '@netdrive-sdk/log@1.0.0-alpha.1':
-    resolution: {integrity: sha512-TZNI74oj76uaMOnbAZlP0L/vCrvIR42yK4P8eXBrsu3yCtHWKXUhQd99e0Ty2H5tBbK7wDqUz8CLaPrMD/Uiow==}
+  '@netdrive-sdk/log@1.0.0':
+    resolution: {integrity: sha512-0Bk/nvAvKcvRoGyCYc5wQWXPrcqAd09UZsl1J/3WVmVHTRdjsCsP1GricJAR0srsaAhHk/7lBUkGgfQphFEG3g==}
 
-  '@netdrive-sdk/utils@1.0.0-alpha.1':
-    resolution: {integrity: sha512-vovP+G6Vt8/V5f/cdbXnhv2Vbg/WtF9MeS6/o0SKsWVzcpL6IWyI5cCCLOwDBeRMAMQeYyaAcZXMaPEnPruBkA==}
+  '@netdrive-sdk/utils@1.0.0':
+    resolution: {integrity: sha512-mnJPt67lOKftco3iXjwQ6ZoaELUSgy7yII5Eg5OH9H5INIyi+C2lK/BYzqOXkAr3GquTuvW/miPYm2f5VGjmpg==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -1232,16 +1232,16 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@netdrive-sdk/ilanzou@1.0.0-alpha.4':
+  '@netdrive-sdk/ilanzou@1.0.0':
     dependencies:
-      '@netdrive-sdk/log': 1.0.0-alpha.1
-      '@netdrive-sdk/utils': 1.0.0-alpha.1
+      '@netdrive-sdk/log': 1.0.0
+      '@netdrive-sdk/utils': 1.0.0
       form-data: 4.0.2
       got: 11.8.2
 
-  '@netdrive-sdk/log@1.0.0-alpha.1': {}
+  '@netdrive-sdk/log@1.0.0': {}
 
-  '@netdrive-sdk/utils@1.0.0-alpha.1': {}
+  '@netdrive-sdk/utils@1.0.0': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
