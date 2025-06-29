@@ -23,6 +23,11 @@ inputs:
     description: "密码"
     required: true
 
+  uuid:
+    description: "设备uuid"
+    required: false
+    default: ""
+
   debug:
     description: "是否输出调试日志"
 
