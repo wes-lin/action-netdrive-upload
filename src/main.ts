@@ -32,10 +32,12 @@ async function run() {
   const username = getInput("username", { required: true });
   const password = getInput("password", { required: true });
   const destPath = getInput("dest-path", { required: false });
+  const uuid = getInput("uuid", { required: false });
   const debug = getBooleanInput("debug", { required: false });
   const options: LanZouYClientOptions = {
     username,
     password,
+    uuid,
   };
   logger.configure({
     isDebugEnabled: debug,
