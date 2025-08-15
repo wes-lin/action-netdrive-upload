@@ -51,6 +51,6 @@ jobs:
 | password   | 是       | 网盘密码                                                   |
 | uuid       | 否       | uuid |
 | debug      | 否       | 是否开启调试日志,用于排错                                  |
-| drive-type | 是       | 网盘类型,现支持小飞机网盘(feijipan)/蓝奏云优享(ilanzou)    |
+| drive-type | 是       | 网盘类型,现支持~~小飞机网盘(feijipan)~~/蓝奏云优享(ilanzou)    |
 | dest-path  | 是       | 上传到网盘的路径                                           |
 | files      | 是       | 上传的目标文件,支持正则表达式筛选                          |
