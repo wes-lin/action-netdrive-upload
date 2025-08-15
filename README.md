@@ -4,6 +4,10 @@
 
 该 [GitHub Action](https://help.github.com/cn/actions) 用于调用分享网盘sdk [netdrive-sdk](https://github.com/wes-lin/netdrive-sdk) 工具，实现文件的批量上传、下载、删除等操作。
 
+## 重要说明
+
+目前小飞机网盘有检测第三方挂载，会有封号风险，请勿用使用小飞机网盘账号。
+
 ## workflow 示例
 
 在目标仓库中创建 `.github/workflows/xxx.yml` 即可，文件名任意，配置参考如下：
